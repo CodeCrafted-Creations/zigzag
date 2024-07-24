@@ -1,13 +1,14 @@
-// src/App.js
 import React from 'react';
-import ZigzagLayout from './ZigzagLayout';
+import ZigzagServiceSection from './ZigzagServiceSection';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 
-const App = () => {
+function App() {
   return (
-    <div>
-      <ZigzagLayout />
+    <div className="App">
+      <ZigzagServiceSection />
     </div>
   );
-};
+}
 
 export default App;
