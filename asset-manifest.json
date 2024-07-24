@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/CodeCrafted-Creations/zigzag/static/css/main.5b487d0a.css",
-    "main.js": "/CodeCrafted-Creations/zigzag/static/js/main.a01edd69.js",
-    "index.html": "/CodeCrafted-Creations/zigzag/index.html",
-    "main.5b487d0a.css.map": "/CodeCrafted-Creations/zigzag/static/css/main.5b487d0a.css.map",
-    "main.a01edd69.js.map": "/CodeCrafted-Creations/zigzag/static/js/main.a01edd69.js.map"
+    "main.css": "/zigzag/static/css/main.5b487d0a.css",
+    "main.js": "/zigzag/static/js/main.a01edd69.js",
+    "index.html": "/zigzag/index.html",
+    "main.5b487d0a.css.map": "/zigzag/static/css/main.5b487d0a.css.map",
+    "main.a01edd69.js.map": "/zigzag/static/js/main.a01edd69.js.map"
   },
   "entrypoints": [
     "static/css/main.5b487d0a.css",
