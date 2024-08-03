@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/zigzag/static/css/main.0025583b.css",
-    "main.js": "/zigzag/static/js/main.2fc5cad0.js",
+    "main.js": "/zigzag/static/js/main.cdcc15fb.js",
     "index.html": "/zigzag/index.html",
     "main.0025583b.css.map": "/zigzag/static/css/main.0025583b.css.map",
-    "main.2fc5cad0.js.map": "/zigzag/static/js/main.2fc5cad0.js.map"
+    "main.cdcc15fb.js.map": "/zigzag/static/js/main.cdcc15fb.js.map"
   },
   "entrypoints": [
     "static/css/main.0025583b.css",
-    "static/js/main.2fc5cad0.js"
+    "static/js/main.cdcc15fb.js"
   ]
 }
