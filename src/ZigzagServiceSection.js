@@ -1,57 +1,151 @@
-import React from 'react';
-import './ZigzagServiceSection.css';
+import React, { useState } from 'react';
+import { Modal, Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const ZigzagServiceSection = () => {
-  const services = [
+const BootstrapModalExample = () => {
+  const [show, setShow] = useState(false);
+  const [selectedPdf, setSelectedPdf] = useState("");
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  // Example PDF options
+  const pdfOptions = [
     {
-      imgSrc: 'https://50mbps.com/wp-content/uploads/2023/08/SIP-trunk.webp',
-      title: 'PRI, SIP Trunk, Cloud Telephony- PSTN/VPN',
-      description: 'SIP enables users to engage in integrated communications from anywhere irrespective of the underlying network infrastructures used.',
-      link: 'https://example.com/sip-trunk'
+      imgSrc: "https://50mbps.com/wp-content/uploads/2023/08/SIP-trunk.webp",
+      title: "PRI, SIP Trunk, Cloud Telephony- PSTN/VPN",
+      description:
+        "SIP enables users to engage in integrated communications from anywhere irrespective of the underlying network infrastructures used.",
+      pdfOptions: [
+        {
+          name: "SIP Trunk Never Miss a Call Again with our Powerful Voice Solution",
+          link: "https://50mbps.com/wp-content/uploads/2023/codec/pdf/products/SIP%20Trunk%20Never%20Miss%20a%20Call%20Again%20with%20our%20Powerful%20Voice%20Solution.pdf",
+        },
+        {
+          name: "Connecting to the Cloud has Never Been this Easy",
+          link: "https://50mbps.com/wp-content/uploads/2023/codec/pdf/products/Connecting%20to%20the%20Cloud%20has%20Never%20Been%20this%20Easy.pdf",
+        },
+      ],
     },
     {
-      imgSrc: 'https://50mbps.com/wp-content/uploads/2023/08/data-solutions.webp',
-      title: 'Data Solutions',
-      description: 'Enhance your business with secure Internet Lease Lines, DNS Security, Point-to-Point, NLD, MPLS-VPN, and SD-WAN solutions for optimized connectivity and performance.',
-      link: 'https://example.com/data-solutions'
+      imgSrc: "https://50mbps.com/wp-content/uploads/2023/08/data-solutions.webp",
+      title: "Data Solutions",
+      description:
+        "Enhance your business with secure Internet Lease Lines, DNS Security, Point-to-Point, NLD, MPLS-VPN, and SD-WAN solutions for optimized connectivity and performance.",
+      pdfOptions: [
+        {
+          name: "All-inone Innovative Single BOX solution",
+          link: "https://50mbps.com/wp-content/uploads/2023/codec/pdf/products/All-inone%20Innovative%20Single%20BOX%20solution.pdf",
+        },
+        {
+          name: "Connect Create and Colla borate Easily",
+          link: "https://50mbps.com/wp-content/uploads/2023/codec/pdf/products/Connect%20Create%20and%20Colla%20borate%20Easily.pdf",
+        },
+      ],
     },
     {
-      imgSrc: 'https://50mbps.com/wp-content/uploads/2023/08/Cyber_Secuirty.webp',
-      title: 'Safeguard your Businesses from Cyber Attacks',
-      description: 'TTBS Data Loss Prevention (DLP) solution protects sensitive data from unauthorized access, leaks, and breaches, ensuring compliance and enabling secure collaboration in today’s digital environments.',
-      link: 'https://example.com/cyber-attacks'
+      imgSrc: "https://50mbps.com/wp-content/uploads/2023/08/Cyber_Secuirty.webp",
+      title: "Safeguard your Businesses from Cyber Attacks",
+      description:
+        "TTBS Data Loss Prevention (DLP) solution protects sensitive data from unauthorized access, leaks, and breaches, ensuring compliance and enabling secure collaboration in today’s digital environments.",
+      pdfOptions: [
+        {
+          name: "ACCELERATING DIGITAL ADOPTION WITH SMART BUSINESS SOLUTIONS",
+          link: "https://50mbps.com/wp-content/uploads/2023/codec/pdf/products/ACCELERATING%20DIGITAL%20ADOPTION%20WITH%20SMART%20BUSINESS%20SOLUTIONS.pdf",
+        },
+        {
+          name: "Cyber Security I Protect your Business from CyberThreats",
+          link: "https://50mbps.com/wp-content/uploads/2023/codec/pdf/products/Cyber%20Security%20I%20Protect%20your%20Business%20from%20CyberThreats.pdf",
+        },
+      ],
     },
     {
-      imgSrc: 'https://50mbps.com/wp-content/uploads/2023/08/MPLS.webp',
-      title: 'The Smarter and Safer MPLS Network',
-      description: 'This is particularly true in the BFSI and FMCG industries. With its any-to-any connectivity, outsourced routing model, QoS and SLAs,multi-protocol label switching (MPLS) is a secure and efficient option for VPN.',
-      link: 'https://example.com/mpls-network'
+      imgSrc: "https://50mbps.com/wp-content/uploads/2023/08/MPLS.webp",
+      title: "The Smarter and Safer MPLS Network",
+      description:
+        "This is particularly true in the BFSI and FMCG industries. With its any-to-any connectivity, outsourced routing model, QoS and SLAs, multi-protocol label switching (MPLS) is a secure and efficient option for VPN.",
+      pdfOptions: [
+        {
+          name: "Harness the Power of Productivity",
+          link: "https://50mbps.com/wp-content/uploads/2023/codec/pdf/products/Harness%20the%20Power%20of%20Productivity.pdf",
+        },
+        {
+          name: "High Quality Unified Communication Solutions",
+          link: "https://50mbps.com/wp-content/uploads/2023/codec/pdf/products/High%20Quality%20Unified%20Communication%20Solutions.pdf",
+        },
+        {
+          name: "Making Businesses Fasterand Flexible",
+          link: "https://50mbps.com/wp-content/uploads/2023/codec/pdf/products/Making%20Businesses%20Fasterand%20Flexible.pdf",
+        },
+        {
+          name: "ONE-STOP SHOP FOR ALL YOUR ICT NEEDS",
+          link: "https://50mbps.com/wp-content/uploads/2023/codec/pdf/products/ONE-STOP%20SHOP%20FOR%20ALL%20YOUR%20ICT%20NEEDS.pdf",
+        },
+        {
+          name: "A Cloud for Every Dream",
+          link: "https://50mbps.com/wp-content/uploads/2023/codec/pdf/products/A%20Cloud%20for%20Every%20Dream.pdf",
+        },
+        {
+          name: "Smart Internet Leased Line I Smarter Safer Speedier",
+          link: "https://50mbps.com/wp-content/uploads/2023/codec/pdf/products/Smart%20Internet%20Leased%20Line%20I%20Smarter%20Safer%20Speedier.pdf",
+        },
+        {
+          name: "Smart VPN MPLS Multi-Location Private Connectivity",
+          link: "https://50mbps.com/wp-content/uploads/2023/codec/pdf/products/Smart%20VPN%20MPLS%20Multi-Location%20Private%20Connectivity.pdf",
+        },
+        {
+          name: "Toll Free Services More Market Reach than Ever Before",
+          link: "https://50mbps.com/wp-content/uploads/2023/codec/pdf/products/Toll%20Free%20Services%20More%20Market%20Reach%20than%20Ever%20Before.pdf",
+        },
+        {
+          name: "Transforming Businesses Through Digitalization",
+          link: "https://50mbps.com/wp-content/uploads/2023/codec/pdf/products/Transforming%20Businesses%20Through%20Digitalization.pdf",
+        },
+        {
+          name: "Ultra-Flexible Anytime Anywhere Cloud Communication",
+          link: "https://50mbps.com/wp-content/uploads/2023/codec/pdf/products/Ultra-Flexible%20Anytime%20Anywhere%20Cloud%20Communication.pdf",
+        },
+      ],
     },
   ];
 
-  return (
-    <section className="zigzag-section">
-      <div className="zigzag-container">
-        <div className="text-center">
-          <span className="tx-sectionHeading__subTitle tx-uppercase">Our Services</span>
-          <h2 className="split-in-right">Services We’re Offering</h2>
-        </div>
+  const handlePdfChange = (e) => {
+    setSelectedPdf(e.target.value);
+  };
 
-        {services.map((service, index) => (
-          <div key={index} className={`zigzag-row ${index % 2 === 0 ? 'even' : 'odd'}`}>
-            <div className="zigzag-content">
-              <img src={service.imgSrc} alt={service.title} />
-            </div>
-            <div className="zigzag-content">
-              <h2>{service.title}</h2>
-              <p>{service.description}</p>
-              <a href={service.link} className="custom-btn">Learn More</a>
-            </div>
+  return (
+    <div>
+      <Button variant="primary" onClick={handleShow}>
+        Open PDF Modal
+      </Button>
+
+      <Modal show={show} onHide={handleClose} size="lg">
+        <Modal.Header closeButton>
+          <Modal.Title>PDF Viewer</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <div className="pdf-selection">
+            <label htmlFor="pdf-select">Choose a PDF: </label>
+            <select id="pdf-select" onChange={handlePdfChange} value={selectedPdf}>
+              {pdfOptions.map((option, index) => (
+                <option key={index} value={option.link}>{option.name}</option>
+              ))}
+            </select>
           </div>
-        ))}
-      </div>
-    </section>
+          {selectedPdf && (
+            <div className="pdf-viewer-container">
+              <iframe src={selectedPdf} width="100%" height="500px" title="PDF Viewer" />
+            </div>
+          )}
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </div>
   );
 };
 
-export default ZigzagServiceSection;
+export default BootstrapModalExample;

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -69,12 +70,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
+# This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
 # Zigzag.github.io
+
 Zigzag Pattern: Alternates images and text blocks in a zigzag pattern for better visual appeal. This component is suitable for showcasing services, products, or any content where alternating images and text provide a visually engaging format.
->>>>>>> 9af662b5fb4b31ef6705bb4b252a96d5161cf5b4
-=======
+
+> > > > > > > # 9af662b5fb4b31ef6705bb4b252a96d5161cf5b4
+
 # zigzag
-### Description of the Zigzag Pattern Layout Element  This React component creates a visually appealing zigzag pattern layout for displaying service offerings. 
->>>>>>> 104bcdf78218409678844b18ee620eefdb3e2fdf
+
+### Description of the Zigzag Pattern Layout Element This React component creates a visually appealing zigzag pattern layout for displaying service offerings.
+
+> > > > > > > 104bcdf78218409678844b18ee620eefdb3e2fdf

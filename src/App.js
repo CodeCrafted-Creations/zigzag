@@ -1,14 +1,10 @@
 import React from 'react';
-import ZigzagServiceSection from './ZigzagServiceSection';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import ReactDOM from 'react-dom';
+import BootstrapModalExample from './BootstrapModalExample'; // Import the updated component
 
-function App() {
-  return (
-    <div className="App">
-      <ZigzagServiceSection />
-    </div>
-  );
-}
-
-export default App;
+ReactDOM.render(
+  <React.StrictMode>
+    <BootstrapModalExample />
+  </React.StrictMode>,
+  document.getElementById('root')
+);

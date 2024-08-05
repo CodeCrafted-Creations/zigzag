@@ -1,12 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import { createRoot } from 'react-dom/client';
+import ZigzagServiceSection from './ZigzagServiceSection';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css';
+import './index.css'; // Assuming you have a global CSS file
 
-ReactDOM.render(
+const rootElement = document.getElementById('root');
+const root = createRoot(rootElement);
+
+root.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <ZigzagServiceSection />
+  </React.StrictMode>
 );

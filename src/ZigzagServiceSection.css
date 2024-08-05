@@ -1,24 +1,43 @@
+/* Global styles */
+body {
+  background: rgba(57, 55, 54, 0.8); /* Semi-transparent background */
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 .zigzag-section {
-  padding: 60px 0;
-  font-family: 'Poppins', sans-serif;
-  max-width: 1400px;
-  margin: 0 auto;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  background-color: #000000; /* Change to transparent */
+  border-radius: 50px;
+  color: white;
+  font-family: Poppins, sans-serif;
+  height: max-content;
+  overflow: auto;
+  margin: auto;
+  display: block; /* Replace 'flow-root' with 'block' */
+  max-width: 1315px;
+  padding-top: 0; /* Replace 'padding-block' with 'padding-top' and 'padding-bottom' */
+  padding-bottom: 0;
 }
 
 .zigzag-container {
-  width: 100%;
+  align-content: center;
+  background-color: #000000;
+  color: #fff;
+  display: block; /* Replace 'flow' with 'block' */
+  height: 100%;
   margin: 0 auto;
+  width: 100%;
 }
 
 .zigzag-row {
-  display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 50px;
+  display: flex;
   flex-wrap: nowrap;
-  position: relative; /* For the vertical divider */
+  justify-content: space-between;
+  margin-bottom: 41px;
+  margin-left: 18px;
+  position: relative;
 }
 
 .zigzag-row img {
@@ -27,7 +46,7 @@
   height: 300px;
   object-fit: cover;
   border-radius: 20px;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Removed 'px' unit for 0 value */
   transition: transform 0.3s ease-in-out;
 }
 
@@ -61,16 +80,16 @@
 }
 
 .tx-sectionHeading__subTitle.tx-uppercase {
-  margin-bottom: 30px;
+  background-color: #fde1e1;
+  border-radius: 50px;
+  color: #393736;
+  display: inline-block;
   font-size: 25px;
   font-weight: 400;
-  color: #393736;
+  line-height: 30px;
+  margin: 30px auto;
+  padding: 20px 40px;
   text-align: center;
-  background-color: #ffe6e2;
-  padding: 25px 40px;
-  display: inline-block;
-  line-height: 1.3;
-  border-radius: 50px;
 }
 
 .text-center {
@@ -86,7 +105,7 @@
 .vertical-divider {
   position: absolute;
   width: 1px;
-  background-color: #ddd;
+  background-color: #ff0000;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -117,32 +136,8 @@
     align-items: center;
   }
 
-}
-.tx-sectionHeading__subTitle.tx-uppercase {
-  margin-bottom: 30px;
-  font-size: 25px;
-  font-weight: 400;
-  color: #393736;
-  text-align: center;
-  background-color: #ffe6e2;
-  padding: 25px 40px;
-  display: inline-block;
-  line-height: 1.4;
-  border-radius: 50px;
-}
-
-.text-center {
-  text-align: center;
-  font-size: 30px;
-}
-
-.split-in-right {
-  font-size: 36px;
-  font-weight: 700;
-}
-
-.zigzag-row img,
-.zigzag-content {
+  .zigzag-row img,
+  .zigzag-content {
     width: 100%;
     text-align: center;
     margin: 0; /* Remove margin for responsive view */
@@ -151,16 +146,18 @@
   .vertical-divider {
     display: none; /* Hide divider on smaller screens */
   }
+}
 
 /* Custom Button Styles */
 .custom-btn {
   display: inline-block; /* Make the anchor tag behave like a button */
   background-color: #393736; /* Change the background color */
   color: #ffffff; /* Change the text color */
+  border-color: #ffffff;
   border: none; /* Remove the border */
   padding: 10px 20px; /* Adjust padding */
   font-size: 16px; /* Adjust font size */
-  font-family: 'Poppins', sans-serif; /* Adjust font family */
+  font-family: "Poppins", sans-serif; /* Adjust font family */
   border-radius: 20px; /* Adjust border radius */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Add transitions */
   text-decoration: none; /* Remove underline from link */
@@ -175,4 +172,60 @@
 .custom-btn:focus {
   outline: none; /* Remove focus outline */
   box-shadow: 0 0 0 3px rgba(255, 127, 80, 0.5); /* Add a custom focus shadow */
+}
+
+/* Modal Styles */
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background-color: #393736;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  color: #ffffff;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1000; /* Ensure the overlay is on top */
+}
+
+.close-btn {
+  background-color: #ff6f61;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  float: right;
+}
+
+.close-btn:hover {
+  background-color: #e65a50;
+}
+
+.pdf-selection {
+  margin-bottom: 20px;
+}
+
+.pdf-selection label {
+  margin-right: 10px;
+}
+
+.pdf-selection select {
+  padding: 5px;
+  font-size: 14px;
+}
+
+/* Ensure iframe in modal is responsive */
+.pdf-viewer-container iframe {
+  width: 100%;
+  height: 500px;
+  border: none;
 }
