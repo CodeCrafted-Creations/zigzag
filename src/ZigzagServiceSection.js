@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Modal, Button, Dropdown } from 'react-bootstrap';
+import { Modal, Button, Dropdown, AlertHeading } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./ZigzagServiceSection.css";
 
@@ -24,7 +24,9 @@ const ZigzagServiceSection = () => {
   };
 
   const services = [
+    
     {
+
       imgSrc: "https://50mbps.com/wp-content/uploads/2023/08/SIP-trunk.webp",
       title: "PRI, SIP Trunk, Cloud Telephony- PSTN/VPN",
       description:
