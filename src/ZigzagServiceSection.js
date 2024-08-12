@@ -1,16 +1,29 @@
-import React, { useState } from 'react';
-import { Modal, Button } from 'react-bootstrap';
+import React, { useState } from "react";
+import { Modal, Button, Dropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "./ZigzagServiceSection.css";
 
-const BootstrapModalExample = () => {
-  const [show, setShow] = useState(false);
+const ZigzagServiceSection = () => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [currentPdfOptions, setCurrentPdfOptions] = useState([]);
   const [selectedPdf, setSelectedPdf] = useState("");
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
 
-  // Example PDF options
-  const pdfOptions = [
+  const openModal = (pdfOptions) => {
+    setCurrentPdfOptions(pdfOptions);
+    setSelectedPdf(pdfOptions[0].link);
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
+  const handlePdfSelection = (link) => {
+    setSelectedPdf(link);
+  };
+
+  const services = [
     {
       imgSrc: "https://50mbps.com/wp-content/uploads/2023/08/SIP-trunk.webp",
       title: "PRI, SIP Trunk, Cloud Telephony- PSTN/VPN",
@@ -109,43 +122,57 @@ const BootstrapModalExample = () => {
     },
   ];
 
-  const handlePdfChange = (e) => {
-    setSelectedPdf(e.target.value);
-  };
-
   return (
-    <div>
-      <Button variant="primary" onClick={handleShow}>
-        Open PDF Modal
-      </Button>
-
-      <Modal show={show} onHide={handleClose} size="lg">
-        <Modal.Header closeButton>
-          <Modal.Title>PDF Viewer</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <div className="pdf-selection">
-            <label htmlFor="pdf-select">Choose a PDF: </label>
-            <select id="pdf-select" onChange={handlePdfChange} value={selectedPdf}>
-              {pdfOptions.map((option, index) => (
-                <option key={index} value={option.link}>{option.name}</option>
-              ))}
-            </select>
-          </div>
-          {selectedPdf && (
-            <div className="pdf-viewer-container">
-              <iframe src={selectedPdf} width="100%" height="500px" title="PDF Viewer" />
+    <div className="container">
+      <section id="zigzag-services">
+        {services.map((service, index) => (
+          <div key={index} className="zigzag-item">
+            <img src={service.imgSrc} alt={service.title} className="zigzag-image" />
+            <div className="zigzag-text">
+              <h2>{service.title}</h2>
+              <p>{service.description}</p>
+              <Button className="custom-btn" onClick={() => openModal(service.pdfOptions)}>
+                Learn More
+              </Button>
             </div>
-          )}
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-        </Modal.Footer>
-      </Modal>
+          </div>
+        ))}
+
+        <Modal show={modalIsOpen} onHide={closeModal} centered className="custom-modal">
+          <Modal.Header closeButton>
+            <Modal.Title>Service PDF Options</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Dropdown>
+              <Dropdown.Toggle variant="success" id="dropdown-basic">
+                Choose PDF
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                {currentPdfOptions.map((option, index) => (
+                  <Dropdown.Item key={index} onClick={() => handlePdfSelection(option.link)}>
+                    {option.name}
+                  </Dropdown.Item>
+                ))}
+              </Dropdown.Menu>
+            </Dropdown>
+            {selectedPdf && (
+              <iframe
+                src={selectedPdf}
+                className="pdf-viewer"
+                title="PDF Viewer"
+                frameBorder="0"
+              />
+            )}
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={closeModal}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      </section>
     </div>
   );
 };
 
-export default BootstrapModalExample;
+export default ZigzagServiceSection;

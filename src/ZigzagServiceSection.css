@@ -1,231 +1,125 @@
 /* Global styles */
 body {
-  background: rgba(57, 55, 54, 0.8); /* Semi-transparent background */
+  background: #ffffff;
+  max-width: 100%;
+  color: rgb(0, 0, 0);
+  overflow-x: hidden;
   font-family: "Poppins", sans-serif;
-  margin: 0;
-  padding: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  word-wrap: break-word;
+}
+.custom-modal .modal-dialog {
+  max-width: 1500px;
+  margin: 1.75rem auto;
+
 }
 
-.zigzag-section {
-  background-color: #000000; /* Change to transparent */
-  border-radius: 50px;
-  color: white;
-  font-family: Poppins, sans-serif;
-  height: max-content;
+.pdf-viewer {
+  width: 100%;
+  height: 100vh;
   overflow: auto;
-  margin: auto;
-  display: block; /* Replace 'flow-root' with 'block' */
-  max-width: 1315px;
-  padding-top: 0; /* Replace 'padding-block' with 'padding-top' and 'padding-bottom' */
-  padding-bottom: 0;
 }
+ 
 
-.zigzag-container {
-  align-content: center;
-  background-color: #000000;
-  color: #fff;
-  display: block; /* Replace 'flow' with 'block' */
-  height: 100%;
+.container {
+  max-width: 1400px;
   margin: 0 auto;
-  width: 100%;
+  padding: 20px;
 }
 
-.zigzag-row {
-  align-items: center;
+/* Zigzag Service Section */
+#zigzag-services {
+  background-color: #f5f5f5;
+  padding: 40px 20px;
+  border-radius: 15px;
+}
+
+.button-container {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  margin-bottom: 41px;
-  margin-left: 18px;
-  position: relative;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-.zigzag-row img {
-  width: 100%;
-  max-width: 600px;
-  height: 300px;
-  object-fit: cover;
+.button-container button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
   border-radius: 20px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Removed 'px' unit for 0 value */
-  transition: transform 0.3s ease-in-out;
-}
-
-.zigzag-row.even {
-  flex-direction: row;
-}
-
-.zigzag-row.odd {
-  flex-direction: row-reverse;
-}
-
-.zigzag-row img:hover {
-  transform: scale(1.05);
+  border: none;
+  background-color: #393736;
+  color: #ffffff;
   cursor: pointer;
 }
 
-.zigzag-content {
-  width: 50%;
-  padding: 15px;
-  box-sizing: border-box;
+.button-container button:hover {
+  background-color: #ff0000;
 }
 
-.zigzag-content h2 {
+
+.zigzag-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.zigzag-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.zigzag-image {
+  width: 50%;
+  max-width: 550px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.zigzag-text {
+  width: 50%;
+  padding: 0 20px;
+}
+
+.zigzag-text h2 {
   font-size: 24px;
   margin-bottom: 15px;
 }
 
-.zigzag-content p {
+.zigzag-text p {
   margin-bottom: 15px;
   font-size: 16px;
 }
 
-.tx-sectionHeading__subTitle.tx-uppercase {
-  background-color: #fde1e1;
-  border-radius: 50px;
-  color: #393736;
-  display: inline-block;
-  font-size: 25px;
-  font-weight: 400;
-  line-height: 30px;
-  margin: 30px auto;
-  padding: 20px 40px;
-  text-align: center;
-}
-
-.text-center {
-  text-align: center;
-  font-size: 30px;
-}
-
-.split-in-right {
-  font-size: 36px;
-  font-weight: 700;
-}
-
-.vertical-divider {
-  position: absolute;
-  width: 1px;
-  background-color: #ff0000;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-@media (max-width: 1024px) {
-  .zigzag-row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .zigzag-row img,
-  .zigzag-content {
-    width: 100%;
-    text-align: center;
-    margin: 0; /* Remove margin for responsive view */
-  }
-
-  .vertical-divider {
-    display: none; /* Hide divider on smaller screens */
-  }
-}
-
-@media (max-width: 768px) {
-  .zigzag-row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .zigzag-row img,
-  .zigzag-content {
-    width: 100%;
-    text-align: center;
-    margin: 0; /* Remove margin for responsive view */
-  }
-
-  .vertical-divider {
-    display: none; /* Hide divider on smaller screens */
-  }
-}
-
-/* Custom Button Styles */
 .custom-btn {
-  display: inline-block; /* Make the anchor tag behave like a button */
-  background-color: #393736; /* Change the background color */
-  color: #ffffff; /* Change the text color */
-  border-color: #ffffff;
-  border: none; /* Remove the border */
-  padding: 10px 20px; /* Adjust padding */
-  font-size: 16px; /* Adjust font size */
-  font-family: "Poppins", sans-serif; /* Adjust font family */
-  border-radius: 20px; /* Adjust border radius */
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Add transitions */
-  text-decoration: none; /* Remove underline from link */
-  text-align: center; /* Center the text */
+  background-color: #393736;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .custom-btn:hover {
-  background-color: #ff0000; /* Change the hover background color */
-  transform: scale(1.05); /* Add a slight scale effect on hover */
+  background-color: #ff0000;
+  transform: scale(1.05);
 }
 
-.custom-btn:focus {
-  outline: none; /* Remove focus outline */
-  box-shadow: 0 0 0 3px rgba(255, 127, 80, 0.5); /* Add a custom focus shadow */
-}
+@media (max-width: 768px) {
+  .zigzag-item {
+    flex-direction: column;
+  }
 
-/* Modal Styles */
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  right: auto;
-  bottom: auto;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  background-color: #393736;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 90%;
-  max-height: 90%;
-  overflow: auto;
-  color: #ffffff;
-}
+  .zigzag-image,
+  .zigzag-text {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
 
-.overlay {
-  background-color: rgba(0, 0, 0, 0.75);
-  z-index: 1000; /* Ensure the overlay is on top */
+  .zigzag-text {
+    padding: 20px 0;
+  }
 }
-
-.close-btn {
-  background-color: #ff6f61;
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  float: right;
-}
-
-.close-btn:hover {
-  background-color: #e65a50;
-}
-
-.pdf-selection {
-  margin-bottom: 20px;
-}
-
-.pdf-selection label {
-  margin-right: 10px;
-}
-
-.pdf-selection select {
-  padding: 5px;
-  font-size: 14px;
-}
-
-/* Ensure iframe in modal is responsive */
-.pdf-viewer-container iframe {
-  width: 100%;
-  height: 500px;
-  border: none;
-}
+/* ZigzagServiceSection.css */
