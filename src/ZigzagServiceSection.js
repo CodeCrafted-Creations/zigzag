@@ -34,7 +34,7 @@ const ZigzagServiceSection = () => {
       pdfOptions: [
         {
           name: "SIP Trunk Never Miss a Call Again with our Powerful Voice Solution",
-          link: "https://50mbps.com/wp-content/uploads/2023/codec/pdf/products/SIP%20Trunk%20Never%20Miss%20a%20Call%20Again%20with%20our%20Powerful%20Voice%20Solution.pdf",
+          link: "https://50mbps.com/wp-content/uploads/2023/codec/pdf/products/SIP%20Trunk%20Never%20Miss%20a%20Call%20Again.pdf",
         },
         {
           name: "Connecting to the Cloud has Never Been this Easy",
