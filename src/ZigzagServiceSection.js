@@ -34,7 +34,7 @@ const ZigzagServiceSection = () => {
       pdfOptions: [
         {
           name: "SIP Trunk Never Miss a Call Again with our Powerful Voice Solution",
-          link: "https://50mbps.com/wp-content/uploads/2023/codec/pdf/products/SIP%20Trunk%20Never%20Miss%20a%20Call%20Again.pdf",
+          link: "https://50mbps.com/wp-content/uploads/2023/codec/pdf/products/SIP%20Trunk%20Never%20Miss%20a%20Call%20Again%20with%20our%20Powerful%20Voice%20Solution.pdf",
         },
         {
           name: "Connecting to the Cloud has Never Been this Easy",
@@ -50,11 +50,11 @@ const ZigzagServiceSection = () => {
       pdfOptions: [
         {
           name: "All-inone Innovative Single BOX solution",
-          link: "https://50mbps.com/wp-content/uploads/2023/codec/pdf/products/All-inone%20Innovative%20Single%20BOX%20solution.pdf",
+          link: "https://50mbps.com/wp-content/uploads/2023/codec/pdf/products/All-in-one%2C%20Innovative%20Single%20Box%20Solution.pdf",
         },
         {
           name: "Connect Create and Colla borate Easily",
-          link: "https://50mbps.com/wp-content/uploads/2023/codec/pdf/products/Connect%20Create%20and%20Colla%20borate%20Easily.pdf",
+          link: "https://50mbps.com/wp-content/uploads/2023/codec/pdf/products/Connect%2C%20Create%20and%20Colla%20borate%20Easily.pdf",
         },
       ],
     },
@@ -102,7 +102,7 @@ const ZigzagServiceSection = () => {
         },
         {
           name: "Smart Internet Leased Line I Smarter Safer Speedier",
-          link: "https://50mbps.com/wp-content/uploads/2023/codec/pdf/products/Smart%20Internet%20Leased%20Line%20I%20Smarter%20Safer%20Speedier.pdf",
+          link: "https://50mbps.com/wp-content/uploads/2023/codec/pdf/products/Smart%20Internet%20Leased%20Line%20I%20Smarter%2C%20Safer%2Cspeedier.pdf",
         },
         {
           name: "Smart VPN MPLS Multi-Location Private Connectivity",
@@ -118,7 +118,7 @@ const ZigzagServiceSection = () => {
         },
         {
           name: "Ultra-Flexible Anytime Anywhere Cloud Communication",
-          link: "https://50mbps.com/wp-content/uploads/2023/codec/pdf/products/Ultra-Flexible%20Anytime%20Anywhere%20Cloud%20Communication.pdf",
+          link: "https://50mbps.com/wp-content/uploads/2023/codec/pdf/products/Ultra-Flexible%2C%20Anyti%20me%2C%20Anywhere%20Cloud%20Communication.pdf",
         },
       ],
     },
